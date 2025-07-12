@@ -247,14 +247,16 @@ nav .contact li:hover, .mobile-nav .contact li:hover {
 
 .site-header h1 {
     margin: 0;
-    font-size: 4rem;
-    font-weight: 200;
+    margin-top: 2rem;
+    font-size: 5rem;
+    font-weight: 400;
 }
 
 .site-header h2 {
     margin-top: 2rem;
-    font-size: 5rem;
-    font-weight: 400;
+    margin-bottom: 0;
+    font-size: 4rem;
+    font-weight: 200;
 }
 
 /** Main content **/
@@ -1077,7 +1079,7 @@ footer {
         padding-top: 0;
     }
 
-    .site-header h1 {
+    .site-header h2 {
         margin-top: -6rem;
     }
 
@@ -1205,12 +1207,12 @@ footer {
         padding-right: 1rem;
     }
 
-    .site-header h1 {
+    .site-header h2 {
         font-size: 4rem;
         text-align: center;
     }
 
-    .site-header h2 {
+    .site-header h1 {
         margin-top: 1rem;
         font-size: 4rem;
         text-align: center;
@@ -1300,12 +1302,12 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-    .site-header h1 {
+    .site-header h2 {
         margin-top: -10rem;
         font-size: 3rem;
     }
 
-    .site-header h2 {
+    .site-header h1 {
         font-size: 3rem;
     }
 
@@ -1330,12 +1332,12 @@ footer {
 
 @media screen and (max-width: 500px) {
 
-    .site-header h1 {
+    .site-header h2 {
         font-size: 2.5rem;
         font-weight: 300;
     }
 
-    .site-header h2 {
+    .site-header h1 {
         font-size: 2.5rem;
         font-weight: 500;
         line-height: 1.2;
