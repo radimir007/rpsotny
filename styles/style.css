@@ -265,7 +265,7 @@ nav .contact li:hover, .mobile-nav .contact li:hover {
 /* Skills section */
 
 .skills-section {
-    background: url("../media/skills-bg.jpg") 0 center no-repeat;
+    background: url("../media/backgrounds/skills-bg.jpg") 0 center no-repeat;
     background-size: cover;
 }
 
@@ -707,7 +707,7 @@ nav .contact li:hover, .mobile-nav .contact li:hover {
 
 /* Education section */
 .education-section {
-    background: url("../media/edu_bg.jpg") 0 0 no-repeat;
+    background: url("../media/backgrounds/edu_bg.jpg") 0 0 no-repeat;
     background-position: cover;
 }
 
