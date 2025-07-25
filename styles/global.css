@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    font-family: "Noto Serif", sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 3000px;
+    background: rgb(133, 255, 182);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Roboto, sans-serif;
+}
+
+img {
+    width: 100%;
+    aspect-ratio: 1/1;
+}

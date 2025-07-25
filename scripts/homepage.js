@@ -1,5 +1,3 @@
-const navLinks = document.querySelectorAll("nav ul:first-child a")
-const navElement = document.querySelector("nav")
 const prevSkillBtn = document.querySelector(".prev-skill")
 const nextSkillBtn = document.querySelector(".next-skill")
 const skillHolder = document.querySelector(".skills-holder > div")
@@ -10,8 +8,6 @@ const projectDetailsWindow = document.querySelector(".project-details-container"
 const projectPrevImage = document.querySelector(".project-details .prev-image")
 const projectNextImage = document.querySelector(".project-details .next-image")
 const projectOverlayCarousel = document.querySelector(".project-details .carousel")
-const menuBtn = document.querySelector(".menu-btn")
-const mobileNav = document.querySelector(".mobile-nav")
 
 const techno = [
     { name: "Docker", icon: "fa-brands fa-docker", color: "#0398fc" },           // 0
@@ -93,27 +89,6 @@ carouselPages.forEach((page, index) => {
         skillHolder.style.right = skillIndex * skill.offsetWidth + "px"
         setAutoCarousel()
     })
-})
-
-navLinks.forEach(link => {
-    link.addEventListener("mouseover", (event) => {
-        event.target.nextSibling.style.width = "100%"
-    })
-
-    link.addEventListener("mouseout", (event) => {
-        event.target.nextSibling.style.width = "0"
-        setLinkUnderline()
-    })
-})
-
-window.addEventListener("scroll", () => {
-    if(window.scrollY > 40) {
-        navElement.classList.add("scrolled")
-    } else {
-        if (!isMenuOpened) {
-            navElement.classList.remove("scrolled")
-        }
-    }
 })
 
 prevSkillBtn.addEventListener("click", () => {
@@ -345,76 +320,4 @@ window.addEventListener('resize', () => {
     updateLegs()
     sectionPositions = []
     
-});
-const sections = [
-    document.querySelector("#skills"),
-    document.querySelector("#projects"),
-    document.querySelector("#education"),
-    document.querySelector("#certificates"),
-    document.querySelector("#about-me")
-]
-
-let sectionPositions = []
-
-if (window.innerWidth > 880) {
-    document.addEventListener("scroll", () => {
-
-        if (sectionPositions.length === 0) {
-            sections.forEach(section => {
-                sectionPositions.push([section.offsetTop - window.innerHeight / 4, section.offsetTop + section.offsetHeight])
-            })
-        }
-
-        if (window.scrollY < sectionPositions[0][0]) {
-            navLinks.forEach((link, index) => {
-                link.nextElementSibling.style.width = "0"
-            })
-        } else {
-            setLinkUnderline()
-        }
-
-    })
-}
-
-const setLinkUnderline = () => {
-    for (let i = 0; i < sectionPositions.length; i++) {
-        if (window.scrollY >= sectionPositions[i][0] && window.scrollY <= sectionPositions[i][1]) {
-            navLinks.forEach((link, index) => {
-                if (index !== i) {
-                    link.nextElementSibling.style.width = "0"
-                } else {
-                    link.nextElementSibling.style.width = "100%"
-                }
-            })
-        }
-    }
-}
-
-let isMenuOpened = false
-
-const darkOverlay = document.querySelector(".dark-overlay")
-
-darkOverlay.addEventListener("click", () => {
-    if (isMenuOpened) {
-        switchMenu()
-    }
 })
-
-menuBtn.addEventListener("click", () => {
-    switchMenu()
-})
-
-const switchMenu = () => {
-    isMenuOpened = !isMenuOpened
-    const menuState = ["none", "block"]
-    
-    darkOverlay.style.display = menuState[+isMenuOpened]
-
-    mobileNav.classList.toggle("active")
-    menuBtn.firstElementChild.classList.toggle("fa-bars")
-    menuBtn.firstElementChild.classList.toggle("fa-xmark")
-
-    if (window.scrollY <= 40) {
-        navElement.classList.toggle("scrolled")
-    }
-}
