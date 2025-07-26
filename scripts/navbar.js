@@ -39,6 +39,24 @@ if (curLocation !== "blog") {
 
 const remainingLinks = Array.from(navLinks).slice(1)
 
+const setLinkUnderline = () => {
+    if (curLocation == "blog") {
+        navLinks[0].nextElementSibling.style.width = "100%"
+    } else {
+        for (let i = 0; i < sectionPositions.length; i++) {
+            if (window.scrollY >= sectionPositions[i][0] && window.scrollY <= sectionPositions[i][1]) {
+                remainingLinks.forEach((link, index) => {
+                    if (index !== i) {
+                        link.nextElementSibling.style.width = "0"
+                    } else {
+                        link.nextElementSibling.style.width = "100%"
+                    }
+                })
+            }
+        }
+    }
+}
+
 if (window.innerWidth > 880 && curLocation !== "blog") {
     document.addEventListener("scroll", () => {
 
@@ -57,20 +75,8 @@ if (window.innerWidth > 880 && curLocation !== "blog") {
         }
 
     })
-}
-
-const setLinkUnderline = () => {
-    for (let i = 0; i < sectionPositions.length; i++) {
-        if (window.scrollY >= sectionPositions[i][0] && window.scrollY <= sectionPositions[i][1]) {
-            remainingLinks.forEach((link, index) => {
-                if (index !== i) {
-                    link.nextElementSibling.style.width = "0"
-                } else {
-                    link.nextElementSibling.style.width = "100%"
-                }
-            })
-        }
-    }
+} else if (curLocation == "blog") {
+    setLinkUnderline()
 }
 
 let isMenuOpened = false

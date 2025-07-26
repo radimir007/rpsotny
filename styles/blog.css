@@ -1,4 +1,163 @@
-main {
+.container {
+    width: 100%;
     background: #fff;
-    height: 200vh;
+}
+
+main {
+    background: hsl(0, 0%, 100%);
+    color: black;
+    padding: 7.5rem 4rem 0;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+h1 {
+    display: inline-block;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    padding-bottom: .2rem;
+    border-bottom: 3px solid #0af03c;
+}
+
+img {
+    aspect-ratio: unset;
+}
+
+.top-section {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    padding-bottom: 3rem;
+}
+
+.latest-article {
+    flex-grow: 5;
+    flex-basis: 0;
+}
+
+.latest-article h3 {
+    font-size: 2rem;
+    line-height: 1.4;
+    font-weight: 900;
+    letter-spacing: .5px;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+}
+
+.latest-article h3:hover {
+    text-decoration: underline;
+}
+
+.latest-article h3 a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.latest-article p {
+    line-height: 1.6;
+    margin: 1rem 0 1.4rem;
+}
+
+.latest-article .article-img {
+    max-width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-radius: .5rem;
+}
+
+.latest-article .article-img img {
+    transition: .4s ease;
+}
+
+.latest-article .article-img img:hover {
+    transform: scale(105%);
+}
+
+.latest-article .article-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Roboto, sans-serif;
+    user-select: none;
+}
+
+.latest-article .article-meta .author {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    column-gap: 1rem;
+}
+
+.latest-article .article-meta .time-meta {
+    margin-right: 1rem;
+    font-weight: 600;
+    color: #888;
+}
+
+.latest-article .article-meta .time-meta > span::before {
+    content: ' • ';
+    font-size: 1rem;
+    margin: 0 .1rem;
+    position: relative;
+    top: 1px;
+}
+
+.latest-article .article-meta .author img {
+    max-width: 40px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 1px solid #aaa;
+}
+
+
+.upcoming-articles {
+    flex-grow: 4;
+    flex-basis: 0;
+}
+
+.upcoming-articles h2 {
+    margin: 0;
+    font-size: 1.9rem;
+    font-weight: 900;
+    color: #222;
+}
+
+.upcoming-articles > header {
+    padding: 2rem 1.2rem 3rem;
+    border-radius: .5rem;
+    background: linear-gradient(to right top, #0af03c, #aaffac)
+}
+
+
+.upcoming-articles article {
+    display: flex;
+    align-items: center;
+    padding: .6rem .8rem;
+    column-gap: 1rem;
+    border-bottom: 1px solid #bbb;
+}
+
+.upcoming-articles article:last-child {
+    border-bottom: none;
+}
+
+.upcoming-articles article .img-blank {
+    flex-basis: 18%;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    background: #888;
+    border-radius: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.upcoming-articles article h3 {
+    font-size: 1.4rem;
+    line-height: 1.4;
 }
