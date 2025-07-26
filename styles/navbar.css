@@ -3,7 +3,7 @@ nav {
     top: 0;
     left: 0;
     z-index: 1000;
-    width: 100svw;
+    width: 100%;
     padding: 1.5rem 4rem;
     display: flex;
     justify-content: space-between;
@@ -14,7 +14,7 @@ nav {
 nav.scrolled {
     background: #222;
     color: white;
-    padding: .6rem 4rem;
+    padding: .2rem 4rem;
     border-bottom: 1px solid rgb(29, 255, 104);
 }
 
