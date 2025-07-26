@@ -209,7 +209,7 @@ nav .contact li:hover, .mobile-nav .contact li:hover {
     }
 
     nav.scrolled {
-        padding: 1rem 2rem;
+        padding: .2rem 2rem;
     }
 }
 
@@ -220,6 +220,10 @@ nav .contact li:hover, .mobile-nav .contact li:hover {
 
     nav .menu-btn {
         display: flex;
+    }
+
+    nav.scrolled {
+        padding: .8rem 2rem;
     }
 }
 

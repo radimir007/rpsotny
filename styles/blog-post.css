@@ -21,6 +21,7 @@ main {
     margin: 0;
     width: 100%;
     height: 500px;
+    max-height: fit-content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,7 +29,12 @@ main {
     border-radius: .5rem;
 }
 
+.article-image figure img {
+    aspect-ratio: unset;
+}
+
 .article-image figcaption {
+    line-height: 1.6;
     font-style: italic;
     margin-top: .4rem;
     font-size: .9rem;
@@ -109,6 +115,8 @@ main {
     font-size: 2rem;
     margin: 2rem 0 0rem;
     font-weight: 800;
+    text-align: left;
+    line-height: 1.4;
 }
 
 .post-content h3 {
@@ -119,6 +127,8 @@ main {
     display: inline-block;
     padding-bottom: .2rem;
     border-bottom: 3px solid #0af03c;
+    text-align: left;
+    line-height: 1.4;
 }
 
 .post-content footer {
@@ -138,4 +148,73 @@ main {
 
 .post-content .preword em {
     font-weight: normal;
+}
+
+@media screen and (max-width: 880px) {
+    .article-header h1 {
+        font-size: 2.5rem;
+    }
+
+    main {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .article-header h1 {
+        font-size: 2rem;
+    }
+
+    .article-header .article-meta .author {
+        font-size: 1rem;
+    }
+
+    .article-header .article-meta .author img {
+        width: 35px;
+    }
+
+    .article-header .article-meta .time-meta {
+        font-size: .8rem;
+    }
+
+    main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .article-image figcaption {
+        font-size: 0.8rem;
+    }
+
+    .post-content p {
+        font-size: 1rem;
+    }
+
+    .post-content h2 {
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .article-header h1 {
+        font-size: 1.7rem;
+    }
+
+    .article-header .article-meta {
+        flex-direction: column;
+        row-gap: .5rem;
+    }
+
+    .article-header .article-meta .time-meta {
+        margin-right: 0;
+    }
+
+    .post-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .post-content h3 {
+        font-size: 1.3rem;
+    }
 }

@@ -103,7 +103,7 @@ const switchMenu = () => {
     menuBtn.firstElementChild.classList.toggle("fa-bars")
     menuBtn.firstElementChild.classList.toggle("fa-xmark")
 
-    if (window.scrollY <= 40) {
+    if (window.scrollY <= 40 && curLocation !== "blog") {
         navElement.classList.toggle("scrolled")
     }
 }
