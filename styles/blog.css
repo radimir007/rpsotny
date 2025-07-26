@@ -90,6 +90,7 @@ img {
     display: flex;
     align-items: center;
     font-size: 1rem;
+    font-weight: bold;
     column-gap: 1rem;
 }
 
