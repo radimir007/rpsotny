@@ -208,7 +208,8 @@ img {
 }
 
 .latest-articles p {
-    line-height: 1.5;
+    font-size: 1rem;
+    line-height: 1.6;
     margin: .8rem 0 1.1rem;
 }
 
@@ -314,11 +315,6 @@ img {
         row-gap: 3rem;
     }
 
-    nav.scrolled {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
     body > footer {
         padding-left: 1rem;
         padding-right: 1rem;
@@ -328,6 +324,11 @@ img {
 @media screen and (max-width: 550px) {
     main {
         padding: 6rem 1rem 0;
+    }
+
+    nav.scrolled {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
 

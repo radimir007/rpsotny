@@ -12,7 +12,7 @@ main {
 }
 
 .article-header h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 900;
     line-height: 1.3;
 }
@@ -91,7 +91,7 @@ main {
 
 .post-content {
     font-size: 1.1rem;
-    text-align: justify;
+    text-align: left;
 }
 
 .post-content .preword {
@@ -108,7 +108,7 @@ main {
 
 .post-content p {
     line-height: 1.8;
-    margin: .8rem 0 1.5rem;
+    margin: 1rem 0 1.8rem;
 }
 
 .post-content h2 {
@@ -129,6 +129,32 @@ main {
     border-bottom: 3px solid #0af03c;
     text-align: left;
     line-height: 1.4;
+}
+
+.post-content blockquote {
+    background: #eee;
+    margin: 0;
+    padding: 2rem 3rem;
+    font-style: italic;
+    border-left: 4px solid #009838;
+}
+
+.post-content .double-image {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    margin-top: 3rem;
+}
+
+.post-content .double-image img {
+    box-shadow: none;
+    aspect-ratio: unset;
+}
+
+.post-content ul {
+    line-height: 1.8;
+    font-style: italic;
+    margin: 1.5rem 0 2rem;
 }
 
 .post-content footer {
@@ -187,12 +213,38 @@ main {
         font-size: 0.8rem;
     }
 
-    .post-content p {
+    .post-content p,
+    .post-content ul {
         font-size: 1rem;
     }
 
     .post-content h2 {
         font-size: 1.7rem;
+    }
+
+    .post-content .double-image {
+        column-gap: 0;
+        margin-top: 2rem;
+    }
+
+    nav.scrolled {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .post-content blockquote {
+        padding: 1rem 1.5rem;
+    }
+
+    .post-content .double-image {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .post-content .double-image img {
+        max-width: 300px;
     }
 }
 
